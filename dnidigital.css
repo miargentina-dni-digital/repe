@@ -1,0 +1,219 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #333;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.DNI_contentContainer{
+    padding: 20px;
+}
+
+.DNI_content{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px -14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.DNI_contentPaddingAddition{
+    padding: 17px;
+    padding-bottom: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.DNI_contentUsername{
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.DNI_content1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+
+.DNI_flipRight{
+    animation: dni_flipRight 0.7s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.DNI_flipLeft{
+    animation: dni_flipLeft 0.7s ease-in;
+    animation-fill-mode: forwards;
+}
+
+.DNI_imgs{
+    width: calc(min(100vw, 700px) - 74px);
+    aspect-ratio: 1.6;
+    position: relative;
+    z-index: 2;
+    transform: translateZ(0px);
+}
+
+.DNI_content1Letters{
+    position: absolute;
+    display: none;
+    justify-content: space-between;
+}
+
+.DNI_content1Lett{
+    object-fit: contain;
+    display: none;
+}
+
+.DNI_dot:nth-child(4n+3){
+    height: 32%;
+    align-self: flex-end;
+}
+
+.DNI_lastAct{
+    font-weight: 500;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.DNI_IMG{
+    width: 100%;
+    object-fit: contain;
+}
+
+.DNI_contentBtn{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 17px;
+    text-decoration: none;
+    width: 100%;
+    position: relative;
+}
+
+.DNI_contentBtn > svg{
+    width: 28px;
+    margin-right: 20px;
+}
+
+.DNI_contentBtn > span{
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.DNI_openDetailLink{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.DNIDigital_photoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.DNIDigital_photoContainer > span{
+    position: absolute;
+    display: block;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.DNI_back{
+    width: calc(min(100vw, 700px) - 74px);
+    aspect-ratio: 1.6;
+    position: absolute;
+    transform: rotateY(180deg) translateZ(1px);
+    z-index: 1;
+}
+
+.DNI_back > img {
+    object-fit: contain;
+    width: 100%;
+    /* box-shadow: 0px 10px 10px -3px rgb(87 87 87); */
+}
+
+@keyframes dni_flipLeft {
+    0%{
+        transform: rotateY(0deg);
+    }
+
+    100%{
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes dni_flipRight {
+    0%{
+        transform: rotateY(180deg);
+    }
+
+    100%{
+        transform: rotateY(0deg);
+    }
+}
+
+.DNI_contentInfoContainer{
+    border-top: 1px solid rgb(174, 174, 174);
+    display: flex;
+    flex-direction: column;
+}
+
+.DNI_contentBtnContainer{
+    display: flex;
+    border-bottom: 1px solid rgb(174, 174, 174);
+}
+
+.DNI_contentBtnContainer>div:nth-child(1){
+    border-right: 1px solid rgb(174, 174, 174);
+}
+
+
+
+#dni {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    perspective: 1000px;
+}
+
+#dni-adelante, #dni-atras{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 1px 1px 15px 1px rgba(176,170,176,1);
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+#dni-relleno {
+  width: 100%;
+  opacity: 0;
+}
+
+#dni-adelante {
+    transform: rotateY(0deg);
+}
+
+#dni-atras {
+    transform: rotateY(180deg);
+}
+
+.volteado #dni-adelante {
+    transform: rotateY(-180deg);
+}
+
+.volteado #dni-atras {
+    transform: rotateY(0deg);
+}

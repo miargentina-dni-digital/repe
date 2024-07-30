@@ -1,0 +1,353 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #333;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.Docs{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.Docs_headerContainer {
+    background: #3772bc;
+    height: 185px;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 30px;
+}
+
+.Docs_headerButtons{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.Docs_headerLabelContainer{
+    display: flex;
+    margin: 0px 20px 10px 20px;
+}
+
+.Docs_headerLabelContainer>p{
+    font-size: 23px;
+    color: white;
+    font-weight: 700;
+    flex-basis: 75%;
+    margin-top: 10px;
+}
+
+.Docs_headerLabelImgContainer{
+    flex-basis: 25%;
+}
+
+.Docs_headerLabelImgContainer>img{
+    object-fit: contain;
+    width: 100%;
+}
+
+.Docs_headerOps {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 0 30px 0 13px;
+}
+
+.Docs_headerTitle{
+    color: white;
+    font-weight: 600;
+    margin-top: -1px;
+}
+
+.Docs_headerTitle>span{
+    color: white;
+    font-size: 15px;
+}
+
+.Docs_content{
+    background-color: #f5f5f5;
+    flex-grow: 2;
+}
+
+.Docs_contentCard{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px -15px black;
+    font-size: 15.5px;
+}
+
+.Docs_contentCardFirst{
+    display: flex;
+    align-items: center;
+    padding: 11px 15px;
+    border: none;
+    background: none;
+    text-align: left;
+    font-size: 16px;
+    position: relative;
+}
+
+.Docs_contentCardFirstBtn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.Docs_contentCardSVG{
+    transform: translate(0px, 3px);
+    margin-right: 15px;
+}
+
+.Docs_contentCardSVG > svg{
+    width: 47px;
+    height: 47px;
+    margin-bottom: -3px;
+}
+
+.Docs_contentCardTitle{
+    font-weight: 700;
+    margin-right: 20px;
+}
+
+.Docs_contentCardTitle>span{
+    font-size: 14px;
+}
+
+.Docs_contentCardDownArrowSVG{
+    margin-left: auto;
+    margin-right: 5px;
+    transform: translate(0px, 3px);
+}
+
+.Docs_contentOpen{
+    display: none;
+    flex-direction: column;
+    padding: 30px 15px 15px;
+    border-top: 1px solid #949494;
+}
+
+.Docs_contentOpenInfoContainer{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #949494;
+}
+
+.Docs_contentOpenInfo{
+
+}
+
+.Docs_contentOpenInfoTitle{
+    color: #6e6e6e;
+    display: block;
+    font-size: 13.5px;
+}
+
+.Docs_contentOpenInfoInfo{
+    font-weight: 700;
+    display: block;
+}
+
+.Docs_contentOpenInfo1{
+    display: flex;
+    flex-direction: column;
+}
+
+.Docs_contentOpenInfo2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.Docs_contentOpenInfo2> div:nth-child(2){
+    flex-basis: 50%;
+}
+
+.Docs_contentOpenBtn{
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 30px;
+    background: #3772bc;
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0px 10px 30px -21px black;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.Docs_contentOpenEnd{
+    padding: 10px;
+}
+
+.Docs_contentOpenEnd > span{
+    color: #6e6e6e;
+}
+
+.DNI_contentForgotPIN{
+    
+}
+
+.Docs_VacQR{
+    width: 40vw;
+}
+
+.Docs_lastAct{
+    text-align: center;
+    margin-bottom: 28px !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+}
+
+.Docs_contentOpen_vac{
+    display: none;
+    flex-direction: column;
+    padding: 15px 15px;
+    border-top: 1px solid #949494;
+}
+
+.Docs_VacContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Docs_dosisVac{
+    margin-top: 40px;
+    margin-bottom: 20px !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+}
+
+.Docs_VacMinisterInfoContainer{
+    margin-bottom: 30px;
+}
+
+.Docs_VacMinisterInfoContainer > h3{
+    color: #2caee8;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+._verCert{
+    background: #2caee8;
+    text-transform: none;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+._descargarCert{
+    background: white;
+    border: 3px solid #2caee8;
+    color: #2caee8;
+    text-transform: none;
+    font-size: 15px;
+
+}
+
+.Docs_Vac_infoContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.Docs_Vac_infoContainer > div{
+    padding: 15px 5px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.Docs_Vac_infoContainer > div:nth-child(1) > span{
+    font-weight: 400;
+    color: #767676;
+    font-size: 15px;
+}
+
+.Docs_Vac_infoContainer > div:nth-child(2) > span{
+    color: #0072bb;
+}
+
+.Docs_licenseFirstAd{
+    font-size: 13px;
+    background: #eeeeee;
+    border: 1px solid #929292;
+    padding: 10px;
+}
+
+.Docs_licenseContentOpenInfo{
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.Docs_licenseStateContent{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 70px;
+}
+
+.Docs_licenseStateContent > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Docs_licenseStateContent>div:nth-child(1)>b{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+
+.Docs_licenseVigenteCircle{
+    padding: 5px;
+    aspect-ratio: 1;
+    display: block;
+    border-radius: 50%;
+    background: #307d30;
+}
+
+.Docs_licenseBtnContainer{
+    padding: 20px 20px 25px;
+    border-top: 1px solid #d7d7d7;
+    border-bottom: 1px solid #d7d7d7;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Docs_licenseBtnContainer>span{
+    color: #2397d5;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.Docs_licenseBottom{
+    padding: 20px;
+    color: #6e6e6e;
+    font-size: 15px;
+}
+
+.Docs_licenseBottom>span{
+    color: #1313c0;
+    text-decoration: underline;
+}
+
+.Docs_licenseQR{
+    width: 70%;
+}
+

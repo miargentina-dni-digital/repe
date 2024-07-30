@@ -1,0 +1,578 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #333;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.Home {
+  width: min(100vw, 700px);
+  height: 100vh;
+  background: #f1f1f1;
+  overflow: auto;
+  padding-bottom: 25px;
+}
+
+.Home_headerContainer {
+  background: #37bbed;
+  height: 160px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 23px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.Home_headerFirstContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Home_headerWelcoming>p{
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.Home_profilePic {
+  width: 46px;
+}
+
+.Home_profilePic>img {
+  object-fit: contain;
+  display: block;
+  width: 100%;
+}
+
+.Home_headerOps {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-right: 30px;
+}
+
+.Home_headerOps > span {
+  width: 20px;
+  height: 2px;
+  background: white;
+}
+
+/* .Home_headerTitle {
+} */
+
+.Home_headerTitleMi {
+  color: black;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.Home_headerTitleArg {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.Home_contentContainer {
+  width: 100%;
+  padding: 0 25px;
+  margin-top: 30px;
+}
+
+.Home_contentBackground{
+  background: white;
+  box-shadow: 0px 10px 20px -20px;
+  border-radius: 15px;
+  width: 100%;
+  padding: 10px;
+}
+
+.Home_content{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 25px;
+}
+
+.Home_contentBtn {
+  flex-basis: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0 30px;
+  text-decoration: none;
+}
+
+.Home_contentTitle{
+  margin: 10px 10px 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.Home_contentBtn > img {
+  width: 74px;
+  height: 74px;
+}
+
+.Home_contentBtn > span {
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 11px;
+  color: black;
+}
+
+/* .Home_contentBtn:nth-child(1n + 5) {
+  box-shadow: 0px 7px 20px -15px black;
+} */
+
+.Home_tutorialUpdateDataContainer {
+  position: absolute;
+    width: 200px;
+    /* aspect-ratio: 1.5; */
+    background: #020202c7;
+    border-radius: 40px 40px 40px 0px;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(0px, -27px);
+    z-index: 2;
+    opacity: 0%;
+    animation: popupAppear 700ms ease-out 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popupAppear {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.Home_tutorialUpdateDataContainerSeen {
+  animation: popupDesapear 700ms ease-in forwards;
+}
+
+@keyframes popupDesapear {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+    display: none;
+  }
+}
+
+.Home_mistramitesContainer {
+  display: block;
+  flex-basis: 33%;
+  position: relative;
+}
+
+.mistramitesPopup {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.mistramitesPopup > p {
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.mistramitesPopup_btnContainer {
+  border: 2px solid transparent;
+  background: #1967cb;
+  color: white;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  animation: btnTimerAnimation 2s ease-in-out;
+  transition: 500ms ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.mistramitesPopup_btnContainer:before {
+  position: absolute;
+  /* width: 0; */
+  height: 3px;
+  content: "";
+  background: #fff;
+  top: -2px;
+  left: -2px;
+  /* transition: 100ms width ease 300ms;
+  -web-kit-transition: 100ms width ease 300ms; */
+  width: 0px;
+  /* transition: 3000ms width ease 0ms; */
+  animation: btnTimerWidthAnim 2s linear 0ms;
+  animation-fill-mode: forwards;
+}
+
+.mistramitesPopup_btnContainer:after {
+  position: absolute;
+  width: 5px;
+  /* height: 0; */
+  content: "";
+  background: #fff;
+  top: -2px;
+  right: -4px;
+  /* transition: 100ms height ease 200ms;
+  -web-kit-transition: 100ms height ease 200ms; */
+  height: 0px;
+  animation: btnTimerHeightAnim 1s linear 2s;
+  animation-fill-mode: forwards;
+}
+.mistramitesPopup_btn:after {
+  position: absolute;
+  /* width: 0; */
+  height: 3px;
+  content: "";
+  background: #fff;
+  bottom: -2px;
+  right: -2px;
+  /* transition: 100ms width ease 100ms;
+  -web-kit-transition: 100ms width ease 100ms; */
+  width: 0px;
+  animation: btnTimerWidthAnim 2s linear 3s;
+  animation-fill-mode: forwards;
+}
+.mistramitesPopup_btn:before {
+  position: absolute;
+  width: 3px;
+  /* height: 0; */
+  content: "";
+  background: #fff;
+  bottom: -2px;
+  left: -2px;
+  /* transition: 100ms height ease 0ms;
+  -web-kit-transition: 100ms height ease 0ms; */
+  height: 0px;
+  animation: btnTimerHeightAnim 1s linear 5s;
+  animation-fill-mode: forwards;
+}
+
+.mistramitesPopup_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.mistramitesPopup_btn > p {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  margin-top: -2px;
+}
+
+@keyframes btnTimerWidthAnim {
+  0% {
+    width: 0px;
+  }
+
+  100% {
+    width: 80px;
+  }
+}
+
+@keyframes btnTimerHeightAnim {
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 36px;
+  }
+}
+
+.mistramitesPopup_btnMasterContainer {
+  align-self: center;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  width: 80px;
+  height: 36px;
+  padding: 1px;
+}
+
+.instalation_masterContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: popupAppear 700ms ease-out 500ms;
+  animation-fill-mode: forwards;
+}
+
+.instalation_container {
+  width: 78%;
+  max-height: 100%;
+  overflow-y: auto;
+  border-radius: 20px;
+  border: 3px solid grey;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  gap: 15px;
+  background: #ffffff;
+  box-shadow: 0px 7px 20px 1px black;
+}
+
+.instalation_header {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.instalation_header > h3 {
+  font-size: 30px;
+}
+
+.instalation_header > p {
+  margin-top: 8px;
+  font-size: 18px;
+  padding: 0 5px;
+}
+
+.instalation_imgContainer > img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.instalation_btnContainer {
+  align-self: center;
+}
+
+.instalation_btnContainer > button {
+  padding: 11px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  background: #da5c86;
+  color: white;
+  box-shadow: 0px 3px 10px black;
+  margin: 6px 0 15px;
+}
+
+.instalation_btnContainer > button:active {
+  background: #da87a2;
+}
+
+.closeInstalationGuide {
+  animation: popupDesapear 700ms ease-in forwards;
+}
+
+.androidInstalation_imgContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.androidInstalation_imgContainer > img {
+  object-fit: cover;
+  width: 100%;
+  height: 45vw;
+}
+
+.androidInstalation_imgContainer > img:nth-child(1) {
+  object-position: top;
+  border-bottom: 5px dashed black;
+}
+
+.androidInstalation_imgContainer > img:nth-child(2) {
+  border-bottom: 2px solid black;
+}
+
+.Home_tutorialBot {
+  left: 50%;
+  border-radius: 0 40px 40px 40px;
+}
+
+.freeTrialWarning_masterContainer{
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #00000038;
+}
+
+.freeTrialWarning_container{
+  width: 80%;
+  /* background: rgb(220, 220, 220); */
+  background: linear-gradient(180deg, white, #91e1ff);
+  border: 1px solid black;
+  box-shadow: 0px 10px 20px black;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 30px 15px;
+  position: relative;
+  z-index: 5;
+}
+
+.freeTrialWarning_activeAccount{
+  margin: 28px 0 7px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.freeTrialWarning_activeAccount > a {
+  text-decoration: none;
+  background: #d9ffff;
+  padding: 9px;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 0 6px 10px -5px black;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.freeTrialWarning_closeX{
+  position: relative;
+  margin-right: 25px;
+  border: none;
+}
+
+.freeTrialWarning_closeX::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 2px;
+  background: black;
+  transform: rotate(45deg);
+}
+
+.freeTrialWarning_closeX::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 2px;
+  background: black;
+  transform: rotate(135deg);
+}
+
+.freeTrialWarning_container > h3{
+  text-align: center;
+  font-size: 26px;
+}
+
+.freeTrialWarning_container > span{
+  font-size: 15px;
+  text-align: center;
+  display: block;
+}
+
+.freeTrialWarning_container > a{
+  margin-top: 30px;
+  align-self: center;
+  padding: 6px 26px;
+  border-radius: 8px;
+  box-shadow: 0px 6px 10px -5px black;
+  font-size: 15px;
+  background-color: rgb(244, 244, 244);
+  border: 1px solid black;
+  text-decoration: none;
+}
+
+.freeTrial_bottomWarning{
+  margin-top: auto;
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.freeTrial_bottomWarning > a{
+  text-decoration: none;
+  background: linear-gradient(358deg, white, #80d7ff);
+  padding: 9px;
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid black;
+  box-shadow: 0 6px 10px -5px black;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.Home_topBannerContainer{
+  width: 100%;
+  padding: 0 25px;
+}
+
+.Home_topBannerContent{
+  height: 141px;
+  width: 100%;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 20px -14px;
+  margin-top: -15px;
+}
+
+.Home_topBannerTicket{
+  width: 48px;
+}
+
+.Home_topBannerTicket>img{
+  object-fit: contain;
+  width: 100%;
+}
+
+.Home_topBannerBtnContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+.Home_topBannerBtnContainer>button{
+  width: 190px;
+  border-radius: 40px;
+  background-color: #1967cb;
+  color: white;
+  pointer-events: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 13px 0;
+  border: none;
+}
+
+.Home_topBannerBtnContainer>p{
+  color: #1b1b1b;
+  font-weight: 700;
+  font-size: 14px;
+}
